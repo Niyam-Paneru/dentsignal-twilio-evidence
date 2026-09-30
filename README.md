@@ -25,6 +25,6 @@ The private repo has the original history. These are the main hashes behind this
 - `68c2535b51f9ffd57574fb785b1434aedd4b3b1f` — clear-text / exception-exposure fixes
 - `07506d612b6bfbad820cd9503a556c848863642a` — final Twilio → Telnyx migration/removal
 
-DentSignal later moved telephony again and currently uses Azure Communication Services. This repo is only here to show the earlier Twilio work I mentioned.
+The DentSignal codebase later migrated telephony again to Azure Communication Services. This repository documents only the earlier Twilio implementation.
 
 I left out credentials, clinic/customer data, and unrelated DentSignal code.
