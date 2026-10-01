@@ -10,12 +10,12 @@ It is not a rebuilt demo, and it is not claiming Twilio is the current DentSigna
 
 ## What is here
 
-- **`twilio_voice_flow.py`** — earlier voice-flow and callback logic;
-- **`twilio_number_provisioning.py`** — earlier number-management workflow;
-- **`admin_number_routes.py`** — FastAPI admin wrapper from that period;
-- **`historical_setup_notes.md`** — setup assumptions from the old implementation;
-- **`security_and_migration.md`** — hardening and migration context;
-- **`EVIDENCE_MAP.md`** — what each artifact proves and what it does not.
+- **[`twilio_voice_flow.py`](evidence/twilio_voice_flow.py)** — earlier voice-flow and callback logic;
+- **[`twilio_number_provisioning.py`](evidence/twilio_number_provisioning.py)** — earlier number-management workflow;
+- **[`admin_number_routes.py`](evidence/admin_number_routes.py)** — FastAPI admin wrapper from that period;
+- **[`historical_setup_notes.md`](evidence/historical_setup_notes.md)** — setup assumptions from the old implementation;
+- **[`security_and_migration.md`](evidence/security_and_migration.md)** — hardening and migration context;
+- **[`EVIDENCE_MAP.md`](EVIDENCE_MAP.md)** — what each artifact proves and what it does not.
 
 ## Why publish history instead of a polished fake demo?
 
