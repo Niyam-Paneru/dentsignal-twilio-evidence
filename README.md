@@ -1,30 +1,38 @@
-# DentSignal — Twilio evidence
+# DentSignal — Twilio Evidence
 
-DentSignal is private, so I pulled out the parts of its earlier Twilio implementation that are relevant here.\n\n**Telephony archaeology: fewer fossils, more webhook callbacks.**
+**Telephony archaeology: fewer fossils, more webhook callbacks.**
 
-This isn't a demo rebuilt for an application. These are sanitized extracts from the real project history: Voice calls, TwiML/webhooks, number provisioning, status callbacks, SMS, admin install routes, and the later security/migration work.
+DentSignal is private. This repo is a sanitized historical evidence pack from its earlier Twilio period.
 
-### Files
+It is not a rebuilt demo, and it is not claiming Twilio is the current DentSignal runtime.
 
-- [twilio_voice_flow.py](evidence/twilio_voice_flow.py) — outbound Voice, status callbacks, recording callback, AMD, TwiML speech flow, call-status lookup
-- [twilio_number_provisioning.py](evidence/twilio_number_provisioning.py) — number search/purchase, voice + SMS webhook config, repair, release
-- [admin_number_routes.py](evidence/admin_number_routes.py) — FastAPI install/maintenance endpoints around provisioning
-- [historical_setup_notes.md](evidence/historical_setup_notes.md) — the onboarding/webhook checklist used with the Twilio version
-- [security_and_migration.md](evidence/security_and_migration.md) — security hardening and the later provider migration
+![Telephony history](docs/history.svg)
 
-### Original DentSignal history
+## What is here
 
-The private repo has the original history. These are the main hashes behind this pack:
+- **`twilio_voice_flow.py`** — earlier voice-flow and callback logic;
+- **`twilio_number_provisioning.py`** — earlier number-management workflow;
+- **`admin_number_routes.py`** — FastAPI admin wrapper from that period;
+- **`historical_setup_notes.md`** — setup assumptions from the old implementation;
+- **`security_and_migration.md`** — hardening and migration context;
+- **`EVIDENCE_MAP.md`** — what each artifact proves and what it does not.
 
-- `6eb60ec15dcc286a5234c8e6de84174d280b8951` — automated number provisioning + webhook setup
-- `27d321263f31c2fa027995baebc05d8b3ec4b351` — Twilio setup / after-hours call behavior
-- `130de4c8fba6429e7cb815f1daf48b6bb7592e9b` — healthcare security work + Twilio → Telnyx migration guide
-- `b13ba5983e40052c4b8238aa39d47f3b2b2facbd` — phone/SID log masking
-- `f311abe1cdc1316ba6c6cfb617b909f4ec95ad9d` — logging/webhook security fixes
-- `df880480dab98bd74d7e394428a7f9433e4de1df` — additional Twilio logging hardening
-- `68c2535b51f9ffd57574fb785b1434aedd4b3b1f` — clear-text / exception-exposure fixes
-- `07506d612b6bfbad820cd9503a556c848863642a` — final Twilio → Telnyx migration/removal
+## Why publish history instead of a polished fake demo?
 
-The DentSignal codebase later migrated telephony again to Azure Communication Services. This repository documents only the earlier Twilio implementation.
+Because the interesting part is that the work existed in the real project.
 
-I left out credentials, clinic/customer data, and unrelated DentSignal code.
+The private repository retains the original history behind these extracts. The public pack removes credentials, clinic/customer data, environment-specific identifiers, and unrelated product code.
+
+## Timeline matters
+
+DentSignal later moved beyond this implementation and went through additional telephony changes.
+
+So:
+
+**code in this repo = historical evidence**
+
+**current architecture = a separate claim that needs separate evidence**
+
+That distinction matters more than making the README sound impressive.
+
+> Old code can be evidence without pretending to be current code.
