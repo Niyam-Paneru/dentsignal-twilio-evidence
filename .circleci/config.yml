@@ -1,0 +1,32 @@
+version: 2.1
+
+jobs:
+  verify:
+    docker:
+      - image: cimg/python:3.12
+    steps:
+      - checkout
+      - run:
+          name: Compile historical Python extracts
+          command: python -m py_compile evidence/*.py
+      - run:
+          name: Verify evidence map and boundaries
+          command: |
+            test -s README.md
+            test -s EVIDENCE_MAP.md
+            test -s SECURITY.md
+            test -s docs/history.svg
+            test -s docs/invariants.md
+            test -s docs/failure-modes.md
+      - run:
+          name: Reject obvious credential material
+          command: |
+            if grep -RIE --exclude='*.md' --exclude='*.svg' '(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|CCIPAT_[A-Za-z0-9_]{20,}|AKIA[A-Z0-9]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----)' evidence; then
+              echo "possible credential material found"
+              exit 1
+            fi
+
+workflows:
+  public-evidence:
+    jobs:
+      - verify
