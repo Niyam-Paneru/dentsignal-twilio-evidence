@@ -35,4 +35,6 @@ So:
 
 That distinction matters more than making the README sound impressive.
 
+Want to verify the historical boundary? Start with the [evidence map](EVIDENCE_MAP.md), [provenance](PROVENANCE.md), [publication invariants](docs/invariants.md), and [failure modes](docs/failure-modes.md).
+
 > Old code can be evidence without pretending to be current code.
