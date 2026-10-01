@@ -1,6 +1,6 @@
 # DentSignal — Twilio evidence
 
-DentSignal is private, so I pulled out the parts of its earlier Twilio implementation that are relevant here.
+DentSignal is private, so I pulled out the parts of its earlier Twilio implementation that are relevant here.\n\n**Telephony archaeology: fewer fossils, more webhook callbacks.**
 
 This isn't a demo rebuilt for an application. These are sanitized extracts from the real project history: Voice calls, TwiML/webhooks, number provisioning, status callbacks, SMS, admin install routes, and the later security/migration work.
 
