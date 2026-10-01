@@ -38,4 +38,4 @@ The public history shows an earlier Twilio implementation, later hardening/migra
 - [docs/invariants.md](docs/invariants.md) — publication invariants.
 - [docs/failure-modes.md](docs/failure-modes.md) — ways historical evidence can become misleading.
 
-The current CI is deliberately narrow: it compiles the Python extracts, checks the required evidence files exist, and scans code for obvious credential patterns. That verifies publication hygiene; it does not prove end-to-end Twilio behavior.
+The CI **configuration** is deliberately narrow: it compiles the Python extracts, checks that the required evidence files exist, and scans code for obvious credential patterns. Those checks verify publication hygiene when they run; they do not prove end-to-end Twilio behavior, and the existence of the config alone is not a passing CI result.
