@@ -4,6 +4,8 @@ Sanitized extracts from an earlier DentSignal telephony implementation. **This i
 
 The private project kept the surrounding application wiring. These public extracts intentionally remove credentials, clinic/customer data, environment-specific identifiers, unrelated product code, and some dependency/client wiring. They are reviewable historical slices, not an end-to-end runnable Twilio app.
 
+Old provider code stays old here; a public README is not a time machine.
+
 ## Evidence map
 
 | Artifact | What you can verify here |
@@ -18,7 +20,7 @@ For the claim boundary on every published extract, use [EVIDENCE_MAP.md](EVIDENC
 
 ## Telephony timeline
 
-![Historical DentSignal Twilio timeline](docs/history.svg)
+[![Historical DentSignal Twilio timeline](docs/history.svg)](docs/history.svg)
 
 The public history shows an earlier Twilio implementation, later hardening/migration work, and eventual Twilio removal from the active private code/docs. It does **not** establish today's provider or runtime.
 
