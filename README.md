@@ -18,7 +18,7 @@ For the claim boundary on every published extract, use [EVIDENCE_MAP.md](EVIDENC
 
 ## Telephony timeline
 
-![Historical DentSignal Twilio timeline](docs/history.svg)
+[![Historical DentSignal Twilio timeline](docs/history.svg)](docs/history.svg)
 
 The public history shows an earlier Twilio implementation, later hardening/migration work, and eventual Twilio removal from the active private code/docs. It does **not** establish today's provider or runtime.
 
