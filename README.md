@@ -1,8 +1,12 @@
 # DentSignal — historical Twilio evidence
 
-Sanitized extracts from an earlier DentSignal telephony implementation. **This is a provenance/evidence pack, not a standalone application, and not evidence that Twilio is the current provider.**
+Sanitized historical extracts showing DentSignal's earlier Twilio voice flows, callbacks, and number lifecycle work.
 
-The private project kept the surrounding application wiring. These public extracts intentionally remove credentials, clinic/customer data, environment-specific identifiers, unrelated product code, and some dependency/client wiring. They are reviewable historical slices, not an end-to-end runnable Twilio app.
+**An old webhook is a history lesson, not a live endpoint.**
+
+This is a public sample from the broader private DentSignal project. The historical implementation is here for review; I can build and adapt surrounding telephony applications and provider integrations. This evidence pack does not establish today's provider or runtime.
+
+The extracts omit credentials, clinic/customer data, environment-specific identifiers, unrelated product code, and some dependency/client wiring. They are historical slices rather than a standalone runnable application.
 
 ## Evidence map
 
@@ -18,7 +22,15 @@ For the claim boundary on every published extract, use [EVIDENCE_MAP.md](EVIDENC
 
 ## Telephony timeline
 
-[![Historical DentSignal Twilio timeline](docs/history.svg)](docs/history.svg)
+```mermaid
+flowchart LR
+    A["<b>Twilio implementation</b><br/>09 Jan 2026"] --> B["<b>Hardening + migration prep</b><br/>02–09 Feb 2026"]
+    B --> C["<b>Twilio removal</b><br/>07 Mar 2026"]
+    classDef input fill:#e8e6df,stroke:#55534a,color:#20201d,stroke-width:2px;
+    class A,B,C input;
+```
+
+Voice/callback/number work was followed by masking, logging cleanup, safer errors, and removal from active private code/docs. The [dated migration trail](evidence/security_and_migration.md) gives the provenance references; the [original historical SVG](docs/history.svg) remains available.
 
 The public history shows an earlier Twilio implementation, later hardening/migration work, and eventual Twilio removal from the active private code/docs. It does **not** establish today's provider or runtime.
 
