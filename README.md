@@ -4,8 +4,6 @@ Sanitized extracts from an earlier DentSignal telephony implementation. **This i
 
 The private project kept the surrounding application wiring. These public extracts intentionally remove credentials, clinic/customer data, environment-specific identifiers, unrelated product code, and some dependency/client wiring. They are reviewable historical slices, not an end-to-end runnable Twilio app.
 
-Old provider code stays old here; a public README is not a time machine.
-
 ## Evidence map
 
 | Artifact | What you can verify here |
