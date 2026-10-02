@@ -1,17 +1,19 @@
 # Evidence map
 
-This repository is a historical slice, not a current runtime.
+This repository is a **sanitized historical evidence pack**, not a current runtime or a standalone application.
 
-| File | What it proves | What it does **not** prove |
+The `evidence/` directory currently contains exactly the five published artifacts below. The Python files preserve historical control-flow and provider-facing responsibilities, but surrounding private dependency/client wiring and unrelated application code were intentionally removed. A file compiling successfully is therefore **not** evidence that the extract runs end to end by itself.
+
+| Published artifact | What it proves | Boundary / what it does **not** prove |
 |---|---|---|
-| `twilio_voice_flow.py` | earlier outbound voice/TwiML/status-callback implementation | current production telephony provider |
-| `twilio_number_provisioning.py` | search/purchase/configure/release flow around Twilio numbers | that any number is currently owned or active |
-| `admin_number_routes.py` | FastAPI admin wrapper around provisioning operations | current admin UI or deployment state |
-| `historical_setup_notes.md` | setup/webhook assumptions from that period | that the old checklist is still current |
-| `security_and_migration.md` | hardening + later provider-migration context | that every later architecture is represented here |
+| [`twilio_voice_flow.py`](evidence/twilio_voice_flow.py) | Earlier outbound call creation, TwiML speech collection, status/recording callbacks, answering-machine detection, and call-status lookup. | Does not prove the current provider, current routes/state machine, deployment state, or standalone execution without the omitted application wiring. |
+| [`twilio_number_provisioning.py`](evidence/twilio_number_provisioning.py) | Earlier number discovery, purchase, voice/SMS webhook configuration, webhook repair, and release helpers. | Does not prove any number is currently owned/active, that Twilio is current, or that omitted client/configuration wiring is present here. |
+| [`admin_number_routes.py`](evidence/admin_number_routes.py) | Historical FastAPI admin-route surface around provisioning operations. | Surrounding auth, clinic CRUD/persistence, and client injection were removed; this is not a standalone current admin API. |
+| [`historical_setup_notes.md`](evidence/historical_setup_notes.md) | Setup/webhook assumptions and operational checks used during that earlier Twilio period. | Historical notes are not current provider guidance or a deployment checklist for today. |
+| [`security_and_migration.md`](evidence/security_and_migration.md) | Dated hardening and provider-migration history, including public references to source commits in the private project. | Does not expose the private commits, prove every later architecture, or establish current runtime/provider state. |
 
 ## Provenance rule
 
-Each public extract is mapped back to private DentSignal history. The public copy removes secrets, clinic/customer data, environment-specific identifiers, and unrelated product code.
+Each public extract maps back to private DentSignal history. The public copy removes credentials, clinic/customer/patient data, environment-specific identifiers, and unrelated product code.
 
-The goal is to show **real implementation history without publishing the whole private system**.
+The goal is to show **real implementation history without reconstructing a fake modern demo or publishing the whole private system**.
