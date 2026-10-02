@@ -1,34 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" role="img" aria-labelledby="title desc">
   <title id="title">DentSignal historical Twilio timeline</title>
   <desc id="desc">A three-stage timeline showing an earlier Twilio implementation, later hardening and migration preparation, and Twilio removal from the active private code and docs.</desc>
 
-  <rect width="1200" height="360" fill="#faf9f6"/>
+  <style>
+    .main { fill: #101828; }
+    .muted { fill: #475467; }
+    .faint { fill: #667085; }
+    .rule { stroke: #98a2b3; }
+    .hairline { stroke: #d0d5dd; }
+    .dot-a { fill: #101828; }
+    .dot-b { fill: #344054; }
+    .dot-c { fill: #475467; }
 
-  <text x="56" y="52" fill="#667085" font-family="Arial, sans-serif" font-size="13" letter-spacing="2.4">DENTSIGNAL / HISTORICAL TELEPHONY EVIDENCE</text>
-  <text x="56" y="94" fill="#101828" font-family="Arial, sans-serif" font-size="28" font-weight="700">Earlier implementation → hardening → migration</text>
+    @media (prefers-color-scheme: dark) {
+      .main { fill: #f2f4f7; }
+      .muted { fill: #d0d5dd; }
+      .faint { fill: #98a2b3; }
+      .rule { stroke: #667085; }
+      .hairline { stroke: #475467; }
+      .dot-a { fill: #f2f4f7; }
+      .dot-b { fill: #d0d5dd; }
+      .dot-c { fill: #98a2b3; }
+    }
+  </style>
 
-  <line x1="145" y1="176" x2="1055" y2="176" stroke="#98a2b3" stroke-width="2"/>
-  <path d="M1055 176 L1039 168 L1039 184 Z" fill="#98a2b3"/>
+  <text x="42" y="40" class="faint" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">DENTSIGNAL / HISTORICAL TELEPHONY EVIDENCE</text>
+  <text x="42" y="78" class="main" font-family="Arial, sans-serif" font-size="28" font-weight="700">Earlier implementation → hardening → migration</text>
 
-  <circle cx="190" cy="176" r="11" fill="#101828"/>
-  <circle cx="600" cy="176" r="11" fill="#344054"/>
-  <circle cx="1010" cy="176" r="11" fill="#475467"/>
+  <line x1="140" y1="150" x2="860" y2="150" class="rule" stroke-width="2"/>
+  <path d="M860 150 L844 142 L844 158 Z" class="faint"/>
 
-  <text x="190" y="142" text-anchor="middle" fill="#475467" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">09 JAN 2026</text>
-  <text x="190" y="219" text-anchor="middle" fill="#101828" font-family="Arial, sans-serif" font-size="18" font-weight="700">Twilio path in private history</text>
-  <text x="190" y="247" text-anchor="middle" fill="#667085" font-family="Arial, sans-serif" font-size="14">voice · callbacks · number lifecycle</text>
-  <text x="190" y="273" text-anchor="middle" fill="#98a2b3" font-family="Arial, sans-serif" font-size="12">6eb60ec</text>
+  <circle cx="165" cy="150" r="10" class="dot-a"/>
+  <circle cx="500" cy="150" r="10" class="dot-b"/>
+  <circle cx="835" cy="150" r="10" class="dot-c"/>
 
-  <text x="600" y="142" text-anchor="middle" fill="#475467" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">02–09 FEB 2026</text>
-  <text x="600" y="219" text-anchor="middle" fill="#101828" font-family="Arial, sans-serif" font-size="18" font-weight="700">Migration prep + hardening</text>
-  <text x="600" y="247" text-anchor="middle" fill="#667085" font-family="Arial, sans-serif" font-size="14">masking · logging cleanup · safer errors</text>
-  <text x="600" y="273" text-anchor="middle" fill="#98a2b3" font-family="Arial, sans-serif" font-size="12">130de4 · b13ba5 · f311ab · df8804 · 68c253</text>
+  <text x="165" y="122" text-anchor="middle" class="muted" font-family="Arial, sans-serif" font-size="16" font-weight="700">09 JAN 2026</text>
+  <text x="165" y="190" text-anchor="middle" class="main" font-family="Arial, sans-serif" font-size="19" font-weight="700">Twilio path in private history</text>
+  <text x="165" y="216" text-anchor="middle" class="faint" font-family="Arial, sans-serif" font-size="16">voice · callbacks · number lifecycle</text>
+  <text x="165" y="241" text-anchor="middle" class="faint" font-family="Arial, sans-serif" font-size="14">6eb60ec</text>
 
-  <text x="1010" y="142" text-anchor="middle" fill="#475467" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">07 MAR 2026</text>
-  <text x="1010" y="219" text-anchor="middle" fill="#101828" font-family="Arial, sans-serif" font-size="18" font-weight="700">Twilio migration / removal</text>
-  <text x="1010" y="247" text-anchor="middle" fill="#667085" font-family="Arial, sans-serif" font-size="14">removed from active private code/docs</text>
-  <text x="1010" y="273" text-anchor="middle" fill="#98a2b3" font-family="Arial, sans-serif" font-size="12">07506d6</text>
+  <text x="500" y="122" text-anchor="middle" class="muted" font-family="Arial, sans-serif" font-size="16" font-weight="700">02–09 FEB 2026</text>
+  <text x="500" y="190" text-anchor="middle" class="main" font-family="Arial, sans-serif" font-size="19" font-weight="700">Migration prep + hardening</text>
+  <text x="500" y="216" text-anchor="middle" class="faint" font-family="Arial, sans-serif" font-size="16">masking · logging cleanup · safer errors</text>
+  <text x="500" y="241" text-anchor="middle" class="faint" font-family="Arial, sans-serif" font-size="14">130de4 · b13ba5 · f311ab · df8804 · 68c253</text>
 
-  <line x1="56" y1="315" x2="1144" y2="315" stroke="#eaecf0" stroke-width="1"/>
-  <text x="56" y="338" fill="#667085" font-family="Arial, sans-serif" font-size="13">Historical evidence ≠ current provider/runtime. Current architecture needs separate evidence.</text>
+  <text x="835" y="122" text-anchor="middle" class="muted" font-family="Arial, sans-serif" font-size="16" font-weight="700">07 MAR 2026</text>
+  <text x="835" y="190" text-anchor="middle" class="main" font-family="Arial, sans-serif" font-size="19" font-weight="700">Twilio migration / removal</text>
+  <text x="835" y="216" text-anchor="middle" class="faint" font-family="Arial, sans-serif" font-size="16">removed from active private code/docs</text>
+  <text x="835" y="241" text-anchor="middle" class="faint" font-family="Arial, sans-serif" font-size="14">07506d6</text>
+
+  <line x1="42" y1="272" x2="958" y2="272" class="hairline" stroke-width="1"/>
+  <text x="42" y="300" class="faint" font-family="Arial, sans-serif" font-size="15">Historical evidence ≠ current provider/runtime. Current architecture needs separate evidence.</text>
 </svg>
