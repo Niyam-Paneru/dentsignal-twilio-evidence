@@ -4,7 +4,7 @@ Sanitized historical extracts showing DentSignal's earlier Twilio voice flows, c
 
 **An old webhook is a history lesson, not a live endpoint.**
 
-This is a public sample from the broader private DentSignal project. The historical implementation is here for review; I can build and adapt surrounding telephony applications and provider integrations. This evidence pack does not establish today's provider or runtime.
+This is a public sample from the broader private DentSignal project. The historical implementation is here for review; I can build and adapt surrounding telephony applications and provider integrations.
 
 The extracts omit credentials, clinic/customer data, environment-specific identifiers, unrelated product code, and some dependency/client wiring. They are historical slices rather than a standalone runnable application.
 
@@ -32,8 +32,6 @@ flowchart LR
 
 Voice/callback/number work was followed by masking, logging cleanup, safer errors, and removal from active private code/docs. The [dated migration trail](evidence/security_and_migration.md) gives the provenance references; the [original historical SVG](docs/history.svg) remains available.
 
-The public history shows an earlier Twilio implementation, later hardening/migration work, and eventual Twilio removal from the active private code/docs. It does **not** establish today's provider or runtime.
-
 ## What this proves — and what it does not
 
 | Supported by this public pack | Not supported by this public pack |
@@ -50,4 +48,4 @@ The public history shows an earlier Twilio implementation, later hardening/migra
 - [docs/invariants.md](docs/invariants.md) — publication invariants.
 - [docs/failure-modes.md](docs/failure-modes.md) — ways historical evidence can become misleading.
 
-The CI **configuration** is deliberately narrow: it compiles the Python extracts, checks that the required evidence files exist, and scans code for obvious credential patterns. Those checks verify publication hygiene when they run; they do not prove end-to-end Twilio behavior, and the existence of the config alone is not a passing CI result.
+The CI **configuration** compiles extracts, checks required evidence files, and scans code for obvious credential patterns. It checks publication hygiene, not end-to-end Twilio behavior. A config alone is not a passing result.
