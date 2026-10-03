@@ -23,10 +23,19 @@ For the claim boundary on every published extract, use [EVIDENCE_MAP.md](EVIDENC
 ## Telephony timeline
 
 ```mermaid
-flowchart LR
-    A["<b>Twilio implementation</b><br/>09 Jan 2026"] --> B["<b>Hardening + migration prep</b><br/>02–09 Feb 2026"]
-    B --> C["<b>Twilio removal</b><br/>07 Mar 2026"]
-    classDef input fill:#e8e6df,stroke:#55534a,color:#20201d,stroke-width:2px;
+---
+config:
+  flowchart:
+    curve: linear
+    nodeSpacing: 28
+    rankSpacing: 42
+---
+flowchart TB
+    accTitle: Telephony timeline
+    accDescr: Decision flow for telephony timeline.
+    A["Twilio implementation<br/>09 Jan 2026"] --> B["Hardening + migration prep<br/>02–09 Feb 2026"]
+    B --> C["Twilio removal<br/>07 Mar 2026"]
+    classDef input stroke-width:1.5px;
     class A,B,C input;
 ```
 
