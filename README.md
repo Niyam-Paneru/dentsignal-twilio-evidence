@@ -1,12 +1,10 @@
 # DentSignal — historical Twilio evidence
 
-Sanitized historical extracts showing DentSignal's earlier Twilio voice flows, callbacks, and number lifecycle work.
+**A look inside an earlier version of my voice-receptionist project.** These sanitized Python extracts show earlier Twilio call flows, TwiML prompts, callbacks, and phone-number lifecycle operations. It's a historical code trail, not a live receptionist.
 
-**An old webhook is a history lesson, not a live endpoint.**
+Start with the [evidence map](EVIDENCE_MAP.md), then inspect [the voice flow](evidence/twilio_voice_flow.py) and [number provisioning](evidence/twilio_number_provisioning.py). An old webhook is a history lesson, not a phone number you should call.
 
-This is a public sample from the broader private DentSignal project. The historical implementation is here for review; I can build and adapt surrounding telephony applications and provider integrations.
-
-The extracts omit credentials, clinic/customer data, environment-specific identifiers, unrelated product code, and some dependency/client wiring. They are historical slices rather than a standalone runnable application.
+The implementation was removed from the active private code; extracts are not a runnable application.
 
 ## Evidence map
 
