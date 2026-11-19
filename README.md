@@ -14,13 +14,26 @@ I kept them public because "I worked on phone systems" is a lot less interesting
 
 The [evidence map](EVIDENCE_MAP.md) labels what each extract supports and what it doesn't. That's the best place to start rather than treating a filename as proof of an entire deployed system.
 
-## Short timeline
+## How the phone code changed
 
-- **January 2026:** earlier Twilio voice/number implementation.
-- **February 2026:** masking, logging, and migration hardening work.
-- **March 2026:** Twilio removed from active private code.
+```mermaid
+---
+config:
+  flowchart:
+    curve: linear
+    nodeSpacing: 28
+    rankSpacing: 42
+---
+flowchart TB
+    accTitle: Telephony timeline
+    accDescr: Decision flow for telephony timeline.
+    A["Twilio implementation<br/>09 Jan 2026"] --> B["Hardening + migration prep<br/>02–09 Feb 2026"]
+    B --> C["Twilio removal<br/>07 Mar 2026"]
+    classDef input stroke-width:1.5px;
+    class A,B,C input;
+```
 
-An old webhook is a history lesson, not a live endpoint. I would prefer nobody discovers that the hard way.
+The public files capture that earlier implementation and its removal. They aren't the current telephony architecture.
 
 ## What was left out on purpose
 
