@@ -1,58 +1,29 @@
-# DentSignal — historical Twilio evidence
+# DentSignal — the old Twilio chapter
 
-**A look inside an earlier version of my voice-receptionist project.** These sanitized Python extracts show earlier Twilio call flows, TwiML prompts, callbacks, and phone-number lifecycle operations. It's a historical code trail, not a live receptionist.
+DentSignal is a private voice-receptionist project. This repository is **not the receptionist**. It's a set of sanitized files from an earlier Twilio implementation — the bits that show how I handled calls, TwiML prompts, callbacks, and phone numbers at that time.
 
-Start with the [evidence map](EVIDENCE_MAP.md), then inspect [the voice flow](evidence/twilio_voice_flow.py) and [number provisioning](evidence/twilio_number_provisioning.py). An old webhook is a history lesson, not a phone number you should call.
+I kept them public because "I worked on phone systems" is a lot less interesting than seeing actual phone-system code.
 
-The implementation was removed from the active private code; extracts are not a runnable application.
+## What you can open
 
-## Evidence map
+- [Voice flow](evidence/twilio_voice_flow.py): outbound call creation, speech gathering, status lookups, and callback wiring.
+- [Number provisioning](evidence/twilio_number_provisioning.py): search/purchase/release helpers and webhook configuration.
+- [Admin routes](evidence/admin_number_routes.py): the earlier FastAPI-facing number operations.
+- [Setup notes](evidence/historical_setup_notes.md): assumptions from that implementation period.
+- [Migration notes](evidence/security_and_migration.md): hardening and removal history.
 
-| Artifact | What you can verify here |
-|---|---|
-| [`twilio_voice_flow.py`](evidence/twilio_voice_flow.py) | Earlier outbound call creation, TwiML speech gathering, lifecycle callbacks, recording callback wiring, machine detection, and call-status lookup. |
-| [`twilio_number_provisioning.py`](evidence/twilio_number_provisioning.py) | Earlier number search, purchase, voice/SMS webhook configuration, webhook repair, and release helpers. |
-| [`admin_number_routes.py`](evidence/admin_number_routes.py) | Historical FastAPI admin surface around number operations; surrounding auth, clinic persistence, and client injection are intentionally absent. |
-| [`historical_setup_notes.md`](evidence/historical_setup_notes.md) | Setup and webhook assumptions used during that earlier provider period. |
-| [`security_and_migration.md`](evidence/security_and_migration.md) | Dated hardening and migration trail, with private-history commit references. |
+The [evidence map](EVIDENCE_MAP.md) labels what each extract supports and what it doesn't. That's the best place to start rather than treating a filename as proof of an entire deployed system.
 
-For the claim boundary on every published extract, use [EVIDENCE_MAP.md](EVIDENCE_MAP.md).
+## Short timeline
 
-## Telephony timeline
+- **January 2026:** earlier Twilio voice/number implementation.
+- **February 2026:** masking, logging, and migration hardening work.
+- **March 2026:** Twilio removed from active private code.
 
-```mermaid
----
-config:
-  flowchart:
-    curve: linear
-    nodeSpacing: 28
-    rankSpacing: 42
----
-flowchart TB
-    accTitle: Telephony timeline
-    accDescr: Decision flow for telephony timeline.
-    A["Twilio implementation<br/>09 Jan 2026"] --> B["Hardening + migration prep<br/>02–09 Feb 2026"]
-    B --> C["Twilio removal<br/>07 Mar 2026"]
-    classDef input stroke-width:1.5px;
-    class A,B,C input;
-```
+An old webhook is a history lesson, not a live endpoint. I would prefer nobody discovers that the hard way.
 
-Voice/callback/number work was followed by masking, logging cleanup, safer errors, and removal from active private code/docs. The [dated migration trail](evidence/security_and_migration.md) gives the provenance references; the [original historical SVG](docs/history.svg) remains available.
+## What was left out on purpose
 
-## What this proves — and what it does not
+Credentials, real clinic data, private identifiers, complete dependencies, auth wiring, persistence, and unrelated application code. The extracts are **not standalone or deployable**, and they don't establish today's provider, current architecture, customer outcomes, or uptime.
 
-| Supported by this public pack | Not supported by this public pack |
-|---|---|
-| Historical provider-facing implementation shape for voice/TwiML/callback work | Current telephony provider or current production architecture |
-| Historical number lifecycle and admin-route work | A standalone or end-to-end deployable application |
-| A dated hardening/migration trail | Production usage, customer outcomes, reliability, or compliance guarantees |
-| Sanitized provenance tied to private project history | The complete private application or every later architecture change |
-
-## Review the boundary
-
-- [PROVENANCE.md](PROVENANCE.md) — source period, what was preserved, what was removed, and why the extracts are non-standalone.
-- [SECURITY.md](SECURITY.md) — public sanitization/security boundary.
-- [docs/invariants.md](docs/invariants.md) — publication invariants.
-- [docs/failure-modes.md](docs/failure-modes.md) — ways historical evidence can become misleading.
-
-The CI **configuration** compiles extracts, checks required evidence files, and scans code for obvious credential patterns. It checks publication hygiene, not end-to-end Twilio behavior. A config alone is not a passing result.
+The included CircleCI configuration covers compilation/publication hygiene; its presence doesn't prove a current production voice service. Read [PROVENANCE.md](PROVENANCE.md) and [SECURITY.md](SECURITY.md) before drawing conclusions from the snippets.
