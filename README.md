@@ -1,8 +1,10 @@
 # DentSignal — the old Twilio chapter
 
-DentSignal is a private voice-receptionist project. This repository is **not the receptionist**. It's a set of sanitized files from an earlier Twilio implementation — the bits that show how I handled calls, TwiML prompts, callbacks, and phone numbers at that time.
+Twilio and I have history. I kept the receipts.
 
-I kept them public because “I worked on phone systems” is less useful than showing the actual call and callback code.
+This repository contains **sanitized pieces of an older DentSignal voice-receptionist implementation**: call flows, TwiML prompts, callbacks, and phone-number operations. It is not the current private receptionist; there's no live phone system hiding behind the README.
+
+“I worked on phone systems” is easy to write. The actual call and callback code is more useful to inspect.
 
 ## What you can open
 
@@ -24,7 +26,7 @@ The [evidence map](EVIDENCE_MAP.md) labels what each extract supports and what i
 
 That's a historical timeline, not a claim about the current provider.
 
-## What was left out on purpose
+## What the receipts can't prove
 
 Credentials, real clinic data, private identifiers, complete dependencies, auth wiring, persistence, and unrelated application code. The extracts are **not standalone or deployable**, and they don't establish today's provider, current architecture, customer outcomes, or uptime. The files support specific historical implementation claims, not a claim that today's complete receptionist is deployed.
 
