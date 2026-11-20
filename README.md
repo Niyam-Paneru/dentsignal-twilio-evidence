@@ -1,8 +1,8 @@
-# DentSignal — the old Twilio chapter
+# DentSignal — the Twilio chapter
 
-Welcome to the old Twilio wing of DentSignal. Please don't try to make a phone call from the museum.
+DentSignal has had more than one phone provider. This is the earlier Twilio part of the story, not the whole book. You can read the code; please don't expect a dial tone from the exhibit.
 
-This repo holds **sanitized code from an earlier implementation**: voice flows, TwiML, callbacks, and number management. I kept it public because “I built a receptionist” is a very easy sentence to type. Old code you can inspect is better evidence.
+I kept the sanitized voice flows, TwiML, callbacks and number-management code public because “I built an AI receptionist” tells you almost nothing about whether I can work with telephony APIs. Inspecting the actual implementation tells you considerably more.
 
 The current DentSignal application is private; these files aren't a deployable receptionist or proof of today's provider.
 
