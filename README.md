@@ -1,12 +1,12 @@
 # DentSignal — the old Twilio chapter
 
-Twilio and I have history. I kept the receipts.
+Welcome to the old Twilio wing of DentSignal. Please don't try to make a phone call from the museum.
 
-This repository contains **sanitized pieces of an older DentSignal voice-receptionist implementation**: call flows, TwiML prompts, callbacks, and phone-number operations. It is not the current private receptionist; there's no live phone system hiding behind the README.
+This repo holds **sanitized code from an earlier implementation**: voice flows, TwiML, callbacks, and number management. I kept it public because “I built a receptionist” is a very easy sentence to type. Old code you can inspect is better evidence.
 
-“I worked on phone systems” is easy to write. The actual call and callback code is more useful to inspect.
+The current DentSignal application is private; these files aren't a deployable receptionist or proof of today's provider.
 
-## What you can open
+## What's on display
 
 - [Voice flow](evidence/twilio_voice_flow.py): outbound call creation, speech gathering, status lookups, and callback wiring.
 - [Number provisioning](evidence/twilio_number_provisioning.py): search/purchase/release helpers and webhook configuration.
@@ -16,7 +16,7 @@ This repository contains **sanitized pieces of an older DentSignal voice-recepti
 
 The [evidence map](EVIDENCE_MAP.md) labels what each extract supports and what it doesn't. That's the best place to start rather than treating a filename as proof of an entire deployed system.
 
-## The old timeline
+## A very short museum timeline
 
 | When | What happened |
 | --- | --- |
@@ -24,7 +24,7 @@ The [evidence map](EVIDENCE_MAP.md) labels what each extract supports and what i
 | February 2–9, 2026 | Hardening and migration preparation |
 | March 7, 2026 | Twilio removed from the active private code |
 
-That's a historical timeline, not a claim about the current provider.
+Those dates describe the older implementation, not what currently answers the phone.
 
 ## What the receipts can't prove
 
