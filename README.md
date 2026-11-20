@@ -2,7 +2,7 @@
 
 DentSignal is a private voice-receptionist project. This repository is **not the receptionist**. It's a set of sanitized files from an earlier Twilio implementation — the bits that show how I handled calls, TwiML prompts, callbacks, and phone numbers at that time.
 
-I kept these files public because "I worked on phone systems" is easy to type. Showing the callback and call flow is harder to fake. Also, telephony has enough invisible moving parts already.
+I kept them public because “I worked on phone systems” is less useful than showing the actual call and callback code.
 
 ## What you can open
 
@@ -22,10 +22,10 @@ The [evidence map](EVIDENCE_MAP.md) labels what each extract supports and what i
 | February 2–9, 2026 | Hardening and migration preparation |
 | March 7, 2026 | Twilio removed from the active private code |
 
-It's a migration timeline, not a statement about today's provider. The Twilio logo in an old commit is not a live status indicator.
+That's a historical timeline, not a claim about the current provider.
 
 ## What was left out on purpose
 
-Credentials, real clinic data, private identifiers, complete dependencies, auth wiring, persistence, and unrelated application code. The extracts are **not standalone or deployable**, and they don't establish today's provider, current architecture, customer outcomes, or uptime. You can inspect the historical plumbing; you cannot call it a working receptionist just because the pipes have names.
+Credentials, real clinic data, private identifiers, complete dependencies, auth wiring, persistence, and unrelated application code. The extracts are **not standalone or deployable**, and they don't establish today's provider, current architecture, customer outcomes, or uptime. The files support specific historical implementation claims, not a claim that today's complete receptionist is deployed.
 
 The included CircleCI configuration covers compilation/publication hygiene; its presence doesn't prove a current production voice service. Read [PROVENANCE.md](PROVENANCE.md) and [SECURITY.md](SECURITY.md) before drawing conclusions from the snippets.
